@@ -143,24 +143,29 @@ POST /offers/run-offer2
 
 ---
 
+
 ## 🧠 Business Rules (Sample)
 
-| Offer Name   | Condition                        |
-| ------------ | -------------------------------- |
-| 10% Discount | Order amount between 100–200     |
-| 5% Discount  | Location-specific (future logic) |
-| No Offer     | Others                           |
+| Offer Name        | Condition              | Applied In        |
+| ----------------- | ---------------------- | ----------------- |
+| 10% Discount      | Order amount **≤ 100** | `Offer1Processor` |
+| No Offer          | Order amount **> 100** | `Offer1Processor` |
+| Free Shipping     | Order amount **> 100** | `Offer2Processor` |
+| Standard Shipping | Order amount **≤ 100** | `Offer2Processor` |
 
 ---
 
 ## ✅ Sample Output from `joined_result_table`
 
-| order\_id | name          | amount | offer        |
-| --------- | ------------- | ------ | ------------ |
-| 1         | Alice Johnson | 100    | 10% Discount |
-| 3         | Carol Lee     | 75     | No Offer     |
-| 4         | David Kim     | 180    | 10% Discount |
-| 8         | Hank Adams    | 210    | No Offer     |
+| customer\_id | name           | email                                                           | phone         | location  | offer         | order\_id | order\_date | amount |
+| ------------ | -------------- | --------------------------------------------------------------- | ------------- | --------- | ------------- | --------- | ----------- | ------ |
+| 401          | Taimur Butala  | [abhatti@batra.com](mailto:abhatti@batra.com)                   | +912238424521 | Hyderabad | No Offer      | 552       | 2024-02-15  | 141    |
+| 422          | Badal Biswas   | [nayantara92@arya-anand.com](mailto:nayantara92@arya-anand.com) | 0095208252    | Raipur    | 10% Discount  | 840       | 2025-03-14  | 449    |
+| 517          | Divij Bhasin   | [nlanka@gmail.com](mailto:nlanka@gmail.com)                     | +916896228996 | Pune      | 10% Discount  | 124       | 2024-05-05  | 658    |
+| 517          | Divij Bhasin   | [nlanka@gmail.com](mailto:nlanka@gmail.com)                     | +916896228996 | Pune      | 10% Discount  | 478       | 2024-12-30  | 182    |
+| 833          | Mishti Gokhale | [zoyabatra@rau.biz](mailto:zoyabatra@rau.biz)                   | 08279061048   | *(null)*  | Free Shipping | 325       | 2023-10-24  | 409    |
+
+
 
 ---
 
@@ -193,5 +198,3 @@ POST /offers/run-offer2
 Developed by **Ramzan Khan**
 
 ---
-
-```
