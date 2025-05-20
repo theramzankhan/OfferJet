@@ -1,7 +1,3 @@
-Here's a clean and professional **GitHub-style `README.md`** for your project **OfferJet**, using proper **Markdown syntax with embedded HTML tags** for enhanced formatting.
-
----
-
 ````markdown
 # 🚀 OfferJet - Intelligent Offer Engine with Spring Batch, Spark, and MySQL
 
@@ -198,15 +194,4 @@ Developed by **Ramzan Khan**
 
 ---
 
-```
-
----
-
-### ✅ Instructions to Use:
-
-- Save the above content in your project root as `README.md`.
-- GitHub will automatically render this with proper formatting, tables, and emoji.
-- You can enhance it further by linking actual endpoints, screenshots, Swagger docs, or badges (e.g., build passing, license, etc.)
-
-Would you like a `LICENSE`, badge suggestions, or CI/CD workflow too?
 ```
