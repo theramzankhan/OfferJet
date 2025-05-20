@@ -127,6 +127,12 @@ mvn spring-boot:run
 
 Trigger batch jobs by hitting the following endpoints:
 
+Add body as well like:
+[
+  { "tableName": "customer", "joinColumn": "customer_id" },
+  { "tableName": "orders", "joinColumn": "customer_id" }
+]
+
 ### ▶️ Run Offer 1 Job
 
 ```http
