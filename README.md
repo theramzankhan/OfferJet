@@ -199,6 +199,12 @@ POST /offers/run-offer2
 
 ---
 
+## 📌 Documnet For Better Understanding
+
+>  https://code2tutorial.com/tutorial/d9370487-8bbe-460b-8cc5-94b641038dc8/index.md
+
+---
+
 ## 👨‍💻 Author
 
 Developed by **Ramzan Khan**
